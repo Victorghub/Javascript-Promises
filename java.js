@@ -2,7 +2,7 @@
 
 // fetch("https://jsonplaceholder.typicode.com/users/1"))
 
-// 1. Then method
+// 1. "Then" method
 /***
  * then method gives us a callback
  * inside the argument is where we get the response from the backend server.
