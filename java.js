@@ -71,7 +71,8 @@ main()
  */
 
 
-function getSubcriptionStatus() {
+/**
+ * function getSubcriptionStatus() {
     return new Promise((resolve, reject) => {
         resolve("VIP")
     })
@@ -83,4 +84,37 @@ async function sub() {
 
 sub();
 
+ * 
+ * */
 
+/**
+ * create a function named get video
+ * accept a parameter called subscription status
+ * return a new promise inside the function that:
+ * if vip resolve show video
+ * if free resolve show trailer
+ * otherwise reject no video
+ * consoe.the result of getvideo() in main()
+ */
+
+
+function getVideo(subscriptionStatus) {
+    return new Promise((resolve, reject) => {
+        if (subscriptionStatus === "VIP") {
+            resolve("Show Video")
+        }
+        else if (subscriptionStatus === "Free") {
+            resolve("Show Trailer")
+        }
+        else {
+            reject("No Video")
+        }
+    })
+}
+
+async function vid() {
+    const status = await getSubsciptionStatus();
+    console.log(getVideo(status))
+}
+
+vid();
