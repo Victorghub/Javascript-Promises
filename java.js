@@ -58,3 +58,29 @@ async function main() {
 }
 
 main()
+
+// how to create a promise // 
+
+/**
+ * Create a function,
+ * return a new promise by return ''new '' followed by promise with capital P
+ * () beside promise accepts a callback
+ * inside this specific argument it accepts resolve or reject
+ * add resolve and reject (if the promise is succesful resolve, if it fails reject it)
+ * once you create your promise if you want to unlock it you use async method
+ */
+
+
+function getSubcriptionStatus() {
+    return new Promise((resolve, reject) => {
+        resolve("VIP")
+    })
+}
+
+async function sub() {
+    console.log(await getSubcriptionStatus())
+}
+
+sub();
+
+
