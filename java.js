@@ -36,3 +36,25 @@
 
 
 // Async/Await method //
+
+/***
+ * Instead of writing .then all you have to do is await the promise
+ * In order to have an await, you have to use an Async function
+ * in  order to create an async function you just have to write async //
+ * in order to get the response you have to store it  in a varible
+ * then yo console.log that response from the variable but it cannot understand it
+ * in order to make the frontend understand it you just add .json() 
+ * then you have to unlock the data to be able to be used.
+ * so you use await again and put it in another variable inside the async function and console.log it
+ * 
+ * 
+ *  */ 
+
+async function main() {
+   const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+   const data = await response.json()
+  // console.log(response.json()) //
+  console.log(data) 
+}
+
+main()
